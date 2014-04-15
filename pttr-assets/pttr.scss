@@ -1,0 +1,179 @@
+/*
+ *  PTTR
+ *
+ *  Lightweight pattern guide skeleton
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+/* Config */
+$pttr-font: 'Droid Sans',sans-serif;
+$pttr-color: #1A1F26;
+$pttr-color-light: lighten($pttr-color, 2%);
+$space: 20px;
+
+%pttr-font {
+  font-family: $pttr-font;
+  color: #353535;
+}
+
+%pttr-header-link {
+  font-family: $pttr-font;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    border-color: skyblue;
+    color: skyblue;
+  }
+}
+
+*[class^='pttr-'] {
+  box-sizing: border-box;
+}
+
+#PTTR { // commons
+  .pttr-btn {
+    @extend %pttr-font;
+    padding: 8px 10px;
+    
+    border: 2px solid;
+    border-radius: 4px;
+    background: none;
+
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+#PTTR { // main styles
+  margin: 0;
+  padding: 0;
+
+  .pttr-container {
+    margin: 0 auto;
+    padding: 0 $space;
+  }
+
+  .pttr-section-header {
+    h1, h2, h3 {
+      @extend %pttr-font;
+    }
+  }
+
+  .pttr-header {
+    display: block;
+    margin-bottom: $space*2;
+    padding: $space 0;
+    position: relative;
+    background: $pttr-color;
+    background: 
+      linear-gradient(135deg, $pttr-color 22px, $pttr-color-light 22px, $pttr-color-light 24px, transparent 24px, transparent 67px, $pttr-color-light 67px, $pttr-color-light 69px, transparent 69px),
+      linear-gradient(225deg, $pttr-color 22px, $pttr-color-light 22px, $pttr-color-light 24px, transparent 24px, transparent 67px, $pttr-color-light 67px, $pttr-color-light 69px, transparent 69px)0 64px;
+      background-color: $pttr-color;
+      background-size: 64px 128px;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+
+      font-size: 24px;
+      font-weight: normal;
+    }
+
+    .pttr-menu-toggle { // "brand"
+      @extend %pttr-header-link;
+
+      display: block;
+      width: 60%;
+      margin: 0 auto;
+      border-bottom-width: 4px;
+      border-color: white;
+      color: white;
+    }
+  }
+
+  .pttr-nav {
+    display: none;
+
+    a {
+      @extend %pttr-header-link;
+      display: block;
+      padding: 10px 20px;
+      font-size: 22px;
+    }
+
+    a.is-active {
+      background: white;
+
+      color: $pttr-color;
+    }
+  }
+
+  .pttr-section-header {
+    margin-bottom: $space*2;
+
+    h2 {
+      display: inline-block;
+      margin: 0;
+      padding-bottom: 4px;
+      border-bottom: 6px solid #ddd;
+      font-size: 32px;
+    }
+  }
+
+  .pttr-rule {
+    margin: $space*2 0;
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  // Staging components
+  .pttr-swatches {
+    li {
+      display: inline-block;
+      list-style: none;
+    }
+
+    .swatch {
+
+    }
+  }
+
+  .pttr-note {
+    font-family: $pttr-font;
+  }
+}
+
+@media (min-width: 600px) {
+  #PTTR {
+    display: table-row;
+    height: 100%;
+
+    .pttr-header,
+    .pttr-main {
+      display: table-cell;
+    }
+
+    .pttr-header { 
+      .pttr-container {
+        width: 194px;
+        padding: 0;
+      }
+
+      .pttr-menu-toggle {
+        margin: 0 auto $space*2;
+        font-size: 22px;
+      }
+
+      .pttr-nav {
+        display: block;
+      }
+    }
+
+    .pttr-main {
+      padding-left: $space*2;
+    }
+  }
+}
