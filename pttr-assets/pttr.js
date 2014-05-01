@@ -1,4 +1,5 @@
 // http://css-tricks.com/snippets/javascript/htmlentities-for-javascript/
+/*
 function htmlEntities(str) {
     return String(str)
       .replace(/&/g, '&amp;')
@@ -13,11 +14,9 @@ function createCodeNode(codeStr) {
   node = document.createElement('pre');
   code = document.createElement('code');
 
-  node.setAttribute('class', 'pttr-section-code');
-
+  // TODO: Detect language
+  node.setAttribute('class', 'pttr-section-code, language-html');
   code.innerHTML = codeStr;
-  code.setAttribute('class', 'language-html'); // TODO: Detect language
-
   node.appendChild(code);
 
   return node;
@@ -26,12 +25,11 @@ function createCodeNode(codeStr) {
 var previews = document.querySelectorAll('.show-code .pttr-section-preview');
 
 for (var i = 0; i < previews.length; i++) {
-  // Remove all leading space
-  var codeStr = htmlEntities(previews[i].innerHTML.replace(/^ +/gm, ''));
+  var codeStr = htmlEntities(previews[i].innerHTML);
   var node = createCodeNode(codeStr); 
-  
+
   previews[i].parentNode.appendChild(node);
 }
-
+*/
 // Do da highlighting
-Prism.highlightAll();
+//Prism.highlightAll();

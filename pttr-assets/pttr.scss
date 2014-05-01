@@ -136,6 +136,14 @@ $pttr-border-radius: 4px;
     }
   }
 
+  .pttr-section-code {
+    max-height: 300px;
+    border: 1px solid #ddd;
+    border-bottom-width: 4px;
+    border-radius: $pttr-border-radius;
+    white-space: pre-wrap;
+  }
+
   .pttr-rule {
     margin: $space*2 0;
     height: 0;
@@ -183,7 +191,7 @@ $pttr-border-radius: 4px;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 620px) {
   #PTTR {
     display: table-row;
     height: 100%;

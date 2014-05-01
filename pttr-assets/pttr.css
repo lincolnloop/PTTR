@@ -75,6 +75,12 @@
       padding-bottom: 4px;
       border-bottom: 6px solid #dddddd;
       font-size: 32px; }
+  #PTTR .pttr-section-code {
+    max-height: 300px;
+    border: 1px solid #ddd;
+    border-bottom-width: 4px;
+    border-radius: 4px;
+    white-space: pre-wrap; }
   #PTTR .pttr-rule {
     margin: 40px 0;
     height: 0;
@@ -103,7 +109,7 @@
   #PTTR .pttr-note {
     font-family: "Droid Sans", sans-serif; }
 
-@media (min-width: 600px) {
+@media (min-width: 620px) {
   #PTTR {
     display: table-row;
     height: 100%; }
