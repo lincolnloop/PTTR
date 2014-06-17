@@ -11,3 +11,5 @@ The following languages are supported in PTTR via [prism.js]()
 * CSS
 * Sass/Scss
 * JavaScript
+
+In order to add syntax to your guide, use the following structure.

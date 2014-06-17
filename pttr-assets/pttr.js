@@ -10,7 +10,7 @@ function htmlEntities(str) {
 
 function createCodeNode(codeStr) {
   var node, code;
-  
+
   node = document.createElement('pre');
   code = document.createElement('code');
 
@@ -26,7 +26,7 @@ var previews = document.querySelectorAll('.show-code .pttr-section-preview');
 
 for (var i = 0; i < previews.length; i++) {
   var codeStr = htmlEntities(previews[i].innerHTML);
-  var node = createCodeNode(codeStr); 
+  var node = createCodeNode(codeStr);
 
   previews[i].parentNode.appendChild(node);
 }
